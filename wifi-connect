@@ -1,0 +1,28 @@
+#include <ESP8266WiFi.h>
+#include <ThingerESP8266.h>
+
+#define USERNAME "liesIanggijono"
+#define DEV_ID "THINGERDEV01"
+#define DEV_CRED "td1td1td1"
+
+#define SSID "Purwadhika 1"
+#define SSID_PASSWORD "Purwadhika01"
+
+ThingerESP8266 thing(USERNAME, DEV_ID, DEV_CRED);
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(D5, OUTPUT);
+
+thing.add_wifi(SSID, SSID_PASSWORD);
+
+thing["ledGreen"] << digitalPin(D5);
+thing["ledRed"] << analogPin(D7);
+
+thing["pot"] >> outputValue(analogRead(A0));
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+   thing.handle();
+}
