@@ -1,0 +1,17 @@
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char outh[]  ="0bd6a1edae8544ef87770f0b3c3c6e92";
+char ssid[]  ="Purwadhika 1";
+char password[]  ="Purwadhika01"; 
+
+//0bd6a1edae8544ef87770f0b3c3c6e92
+void setup() {
+  // put your setup code here, to run once:
+Blynk.begin(outh, ssid, password);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+Blynk.run();
+}
