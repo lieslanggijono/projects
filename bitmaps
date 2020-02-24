@@ -1,0 +1,2 @@
+an_image = image.new('RGB', (8,8), 'black')
+an_image.save("black_img.bmp", 'bmp')

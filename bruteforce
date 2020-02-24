@@ -1,0 +1,14 @@
+alphabet="abcdefghijklmnopqrstuvwxyz"
+message="wapu iwt ephhldgs udg iwt uxghi rajt xh tctgvxots"
+def decode(secretMessage):
+    for key in range(len(alphabet)):
+        newAlphabet=alphabet[key:] + alphabet[:key]
+        attempt=""
+    for i in range(len(myMessage)):
+            index = alphabet.find(myMessage[i])
+    if index < 0:
+            attempt +=myMessage[i]
+    else:
+            attempt+= newAlphabet[index]
+    print("Key:"+ "-" + attempt)
+decode(message)

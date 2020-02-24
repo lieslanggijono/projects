@@ -1,0 +1,11 @@
+A=ob1101
+B=ob1010
+C=A & B
+print(bin(C))
+
+D = A | B
+print(bin(D))
+
+E = ~A
+print(bin(E))
+
